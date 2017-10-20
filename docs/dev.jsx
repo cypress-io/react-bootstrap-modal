@@ -1,12 +1,10 @@
 'use strict';
-
-
-
-
 var React = require('react')
   , ReactDOM = require('react-dom')
   , EditableExample = require('./components/EditableExample');
 
+require('@monastic.panic/component-playground/codemirror.css')
+require('@monastic.panic/component-playground/themes/oceanic.css')
 require('../src/less/rbm-patch.less')
 
 class Docs extends React.Component {
@@ -18,13 +16,13 @@ class Docs extends React.Component {
         <section className='section'>
           <div className='section-inner'>
             <h3>Accessible</h3>
-            <EditableExample codeText={require('./examples/accessible')()} />
+            <EditableExample codeText={require('!!raw!./examples/accessible')} />
 
             <h3>Static Backdrop Animation</h3>
-            <EditableExample codeText={require('./examples/static')()} />
+            <EditableExample codeText={require('!!raw!./examples/static')} />
 
             <h3>Stackable Modals</h3>
-            <EditableExample codeText={require('./examples/stackable')()} />
+            <EditableExample codeText={require('!!raw!./examples/stackable')} />
           </div>
         </section>
       </div>
